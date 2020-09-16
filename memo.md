@@ -105,7 +105,7 @@
     更新したいブランチにいる状態で，upstreamがリモートのリポジトリに設定されていれば，`git pull`だけでOK？
 
 
-### Others
+## Others
 
 - ssh のパスフレーズを変更  
     参考: [sshの秘密鍵パスフレーズの確認と変更](https://qiita.com/shukan0728/items/e654953c89aab6f847a4)  
