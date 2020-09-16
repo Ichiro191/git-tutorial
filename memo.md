@@ -62,8 +62,20 @@
     p.64 git add と git commit -m を同時に行えるコマンド．
 
 - `git rebase -i HEAD~2`
-    HEAD（最新のコミット）を含めた指定数字回までのコミットを統合して一つのコミットにする．
+    p.65 HEAD（最新コミット）を含めた指定数字回までのコミットを統合する．
     起動するエディタで，統合してなくしたいコミットの行頭のpickをfixupに書き換える．
+
+
+### 4.4 リモートリポジトリへの送信
+
+- `git remote add origin git@github.com:User/repository_name.git`
+    ローカルリポジトリのリモートリポジトリとして登録する．
+    originは名前（識別子）であり，以後リモートレポジトリを指すようになる．
+
+- masterブランチにいる状態で，`git push -u origin master`
+    originという名前のリモートリポジトリのmasterブランチに，現在のブランチ（ここではローカルリポジトリにあるmasterブランチ）の内容を送信する．
+    `-u`オプションは，ローカルリポジトリの現在のブランチのupstreamが，originリポジトリのmasterブランチであることを同時に設定する．このオプションにより，`git pull`コマンドを実行する時にオプションを与えずとも，このローカルリポジトリのブランチはoriginのmasterブランチから取得されるようになる．
+    他のブランチにいる状態で`git push -u origin other_branch`すれば，同じく送信できる．
 
 
 ### Others
