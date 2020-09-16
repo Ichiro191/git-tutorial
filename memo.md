@@ -44,7 +44,8 @@
     p.50 branch_nameという名前のブランチを作成して，移動する．
     `git branch branch_name && git checkout branch_name`と同じ働きをする．
 
-- 
+
+### 4.3 コミットを変更する操作
 
 
 - 
