@@ -44,11 +44,8 @@
     p.50 branch_nameという名前のブランチを作成して，移動する．
     `git branch branch_name && git checkout branch_name`と同じ働きをする．
 
-<<<<<<< HEAD
 - `git checkout -`
     p.51 一つ前のブランチに切り替える．
-=======
->>>>>>> fix-B
 
 - `git merge --no-ff branch_name`
     p.53 現在のブランチに，指定したブランチをマージする．
