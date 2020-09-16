@@ -57,8 +57,11 @@
 
 ### 4.3 コミットを変更する操作
 
+- `git commit -am "foo bar"`
+    p.64 git add と git commit -m を同時に行えつ．
 
-### others
+
+### Others
 
 - `git mv old_file new_file`
     ファイルのリネーム．ステージ領域にファイル名の変更として登録される．
