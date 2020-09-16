@@ -69,14 +69,16 @@
 ### 4.4 リモートリポジトリへの送信
 
 - `git remote add origin git@github.com:User/repository_name.git`
-    ローカルリポジトリのリモートリポジトリとして登録する．
+    p.68 ローカルリポジトリのリモートリポジトリとして登録する．
     originは名前（識別子）であり，以後リモートレポジトリを指すようになる．
 
 - masterブランチにいる状態で，`git push -u origin master`
-    originという名前のリモートリポジトリのmasterブランチに，現在のブランチ（ここではローカルリポジトリにあるmasterブランチ）の内容を送信する．
+    p.68 originという名前のリモートリポジトリのmasterブランチに，現在のブランチ（ここではローカルリポジトリにあるmasterブランチ）の内容を送信する．
     `-u`オプションは，ローカルリポジトリの現在のブランチのupstreamが，originリポジトリのmasterブランチであることを同時に設定する．このオプションにより，`git pull`コマンドを実行する時にオプションを与えずとも，このローカルリポジトリのブランチはoriginのmasterブランチから取得されるようになる．
-    他のブランチにいる状態で`git push -u origin other_branch`すれば，同じく送信できる．
+    p.69 他のブランチから`git push -u origin other_branch`すれば，同じく送信できる．
 
+- `git push`
+    一度`-u`オプション付きで実行したら，その後はオプションなしでOK．
 
 ### Others
 
