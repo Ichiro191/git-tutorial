@@ -37,13 +37,17 @@
 ### 4.2 ブランチの操作
 
 - `git branch`
-    ブランチ名の一覧の表示と，現在のブランチの確認
+    p.49 ブランチ名の一覧の表示と，現在のブランチの確認
+    ブランチの名前を追加することで，新たなブランチの作成も可能．
+
+- `git checkout -b branch_name`
+    p.50 branch_nameという名前のブランチを作成して，移動する．
+    `git branch branch_name && git checkout branch_name`と同じ働きをする．
 
 - 
 
 
 - 
-
 
 
 ### others
