@@ -107,9 +107,34 @@
 
 ### Others
 
+- ssh のパスフレーズを変更  
+    参考: [sshの秘密鍵パスフレーズの確認と変更](https://qiita.com/shukan0728/items/e654953c89aab6f847a4)  
+    `ssh-keygen -f 秘密鍵ファイル名 -p`
+
 - `git mv old_file new_file`  
+    参考: [【 git mv 】コマンド――ファイルを移動する／リネームする](https://www.atmarkit.co.jp/ait/articles/2006/12/news017.html)  
     ファイルのリネーム．ステージ領域にファイル名の変更として登録される．  
     「git mv」ではなく「mv」コマンドでファイル名を変更・移動した場合は「ワークツリーでファイルを削除し、新しいファイルを追加した」という扱いになる．
 
-- ssh のパスフレーズを変更  
-    `ssh-keygen -f 秘密鍵ファイル名 -p`
+- git bashの青色が読みづらい問題  
+    解決策 参考: [Windows環境で快適にBash(Git Bash)とターミナル(mintty)を使うために色とフォントを変える](https://qiita.com/Cesaroshun/items/6f7aa548ca65b137ca15)  
+    dracula が一番読みやすく感じる．
+
+- git add で複数ファイルを同時に行うコマンド  
+    参考: [git add -u と git add -A と git add . の違い](https://note.nkmk.me/git-add-u-a-period/)
+
+- remoteに追加されたブランチを見れるようにする
+    参考: [gitでリモートに追加されたブランチが表示されないときは](https://www.atotok.co.jp/labo/4040620404d4987071e9dfe58eee87a0)  
+    `git ls-remote (指定する場合はリモートリポジトリ名，originとか）`で新しくリモートに追加されたブランチが確認できたら，  
+    `git fetch`（リモートブランチの最新の情報を取得するコマンド）を実行する．
+
+- ローカルのブランチが追跡しているリモートブランチを確認する方法
+    参考: [gitでローカルのブランチが追跡しているリモートブランチを確認する方法](https://qiita.com/kz_morita/items/c624f8cf27ec82de0baa)  
+    `git branch -vv` 結果として以下のような情報が得られる。  
+    ```
+    ブランチ名 コミット番号 [追跡ブランチ名] コミットメッセージ
+    ```
+    pullとかpushで追跡の設定がされていないブランチにたいして，追跡するように設定する方法もあるようだ．
+
+- Git で不要になったローカルブランチ・リモートブランチを削除する方法
+    参考（2013年なので，少し古い）: [Git で不要になったローカルブランチ・リモートブランチを削除する方法](https://qiita.com/iorionda/items/c7e0aca399371068a9b8)
