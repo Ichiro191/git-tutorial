@@ -58,7 +58,7 @@
 ### 4.3 コミットを変更する操作
 
 - `git commit -am "foo bar"`
-    p.64 git add と git commit -m を同時に行えつ．
+    p.64 git add と git commit -m を同時に行える．
 
 
 ### Others
