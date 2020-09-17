@@ -165,3 +165,7 @@
 - GitHubからリポジトリを削除  
     参考: [GitHub でリポジトリを作成・削除する方法 - Qiita](https://qiita.com/TK-C/items/c72edc46e74ccbb7ba78)  
     削除したいリポジトリのsettingsの一番下から．
+
+- powershellのプロンプトを編集  
+    [posh-gitのインストール＆プロンプトカスタマイズ - Qiita](https://qiita.com/wenbose/items/3ebc2e8acd4513d71ac3)
+    [PowerShellでGitを使いやすくする - shuhelohelo’s blog](https://shuhelohelo.hatenablog.com/entry/2019/10/22/025603)
