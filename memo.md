@@ -57,6 +57,18 @@
 
 ### 4.3 コミットを変更する操作
 
+- `git reset --hard hash_value`  
+    p.56 リポジトリのHEAD，ステージ，現在のワーキングツリーを指定した以前の状態（コミット）に戻す．  
+    ハッシュ値はgit logとかで調べる．なお，ハッシュ値は4文字以上入力すれば動作する．
+
+- `git reflog`  
+    p.58 現在のリポジトリで行われた作業のログを確認できる．  
+    歴史を戻す前のハッシュ値を見つけて，`git reset --hard`で指定することで，歴史を戻す前の状態を復元できる．  
+    GitのGCが行われない限り．
+
+- `git commit --amend`  
+    p. 61 直前のコミットメッセージを修正する．エディタが起動する．
+
 - `git commit -am "foo bar"`  
     p.64 git add と git commit -m を同時に行えるコマンド．
 
@@ -68,7 +80,7 @@
 ### 4.4 リモートリポジトリへの送信
 
 - `git remote add origin git@github.com:User/repository_name.git`  
-    p.68 ローカルリポジトリのリモートリポジトリとして登録する．  
+    p.68 GitHubでリポジトリを作った後，ローカルリポジトリのリモートリポジトリとして登録する．  
     originは名前（識別子）であり，以後リモートレポジトリを指すようになる．
 
 - masterブランチにいる状態で，`git push -u origin master`  
@@ -97,26 +109,17 @@
     その後ろに与えているのが，チェックアウト元となるリモートリポジトリのブランチ．  
     ローカルのブランチとリモートのブランチは同じ名前にすると分かりやすい．
 
-- リモートリポジトリの変更を反映したいブランチで？`git pull origin local_branch_name`  
+- リモートリポジトリの変更を反映したいブランチで`git pull origin remote_branch_name`  
     ローカルリポジトリのブランチをリモートリポジトリの状態に更新する．  
-    ローカルのブランチの名前を指定しているから，現在のブランチは関係ない？  
-    更新したいブランチにいる状態で，upstreamがリモートのリポジトリに設定されていれば，`git pull`だけでOK？
+    更新したいブランチにいる状態で，upstreamがリモートのリポジトリに設定されていれば，`git pull`だけでOK．
 
 
-## Others
+## Other Git Commands
 
-- ssh のパスフレーズを変更  
-    参考: [sshの秘密鍵パスフレーズの確認と変更](https://qiita.com/shukan0728/items/e654953c89aab6f847a4)  
-    `ssh-keygen -f 秘密鍵ファイル名 -p`
-
-- `git mv old_file new_file`  
+- ファイルのリネーム  
     参考: [【 git mv 】コマンド――ファイルを移動する／リネームする](https://www.atmarkit.co.jp/ait/articles/2006/12/news017.html)  
-    ファイルのリネーム．ステージ領域にファイル名の変更として登録される．  
+    `git mv old_file new_file`．ステージ領域にファイル名の変更として登録される．  
     「git mv」ではなく「mv」コマンドでファイル名を変更・移動した場合は「ワークツリーでファイルを削除し、新しいファイルを追加した」という扱いになる．
-
-- git bashの青色が読みづらい問題  
-    解決策 参考: [Windows環境で快適にBash(Git Bash)とターミナル(mintty)を使うために色とフォントを変える](https://qiita.com/Cesaroshun/items/6f7aa548ca65b137ca15)  
-    dracula が一番読みやすく感じる．
 
 - git add で複数ファイルを同時に行うコマンド  
     参考: [git add -u と git add -A と git add . の違い](https://note.nkmk.me/git-add-u-a-period/)
@@ -136,3 +139,29 @@
 
 - Git で不要になったローカルブランチ・リモートブランチを削除する方法  
     参考（2013年なので，少し古い）: [Git で不要になったローカルブランチ・リモートブランチを削除する方法](https://qiita.com/iorionda/items/c7e0aca399371068a9b8)
+
+- git fetch、merge、pullの違い  
+    参考: [【初心者向け】git fetch、git merge、git pullの違いについて - Qiita](https://qiita.com/wann/items/688bc17460a457104d7d)  
+    `git fetch`…リモートの全ブランチ → ローカルの全「origin/xxx」ブランチ．  
+    `git merge xxx`…ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ  
+    `git pull origin xxx`  = fetch + merge． つまり，リモートの「xxx」ブランチ → ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ
+
+
+## Other Git tips
+
+- [GitのHEADとは何者なのか - Qiita](https://qiita.com/ymzk-jp/items/00ff664da60c37458aaa)  
+
+
+## Others
+
+- ssh のパスフレーズを変更  
+    参考: [sshの秘密鍵パスフレーズの確認と変更](https://qiita.com/shukan0728/items/e654953c89aab6f847a4)  
+    `ssh-keygen -f 秘密鍵ファイル名 -p`
+
+- git bashの青色が読みづらい問題  
+    解決策 参考: [Windows環境で快適にBash(Git Bash)とターミナル(mintty)を使うために色とフォントを変える](https://qiita.com/Cesaroshun/items/6f7aa548ca65b137ca15)  
+    dracula が一番読みやすく感じる．
+
+- GitHubからリポジトリを削除  
+    参考: [GitHub でリポジトリを作成・削除する方法 - Qiita](https://qiita.com/TK-C/items/c72edc46e74ccbb7ba78)  
+    削除したいリポジトリのsettingsの一番下から．
