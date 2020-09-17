@@ -67,7 +67,7 @@
     GitのGCが行われない限り．
 
 - `git commit --amend`  
-    p. 61 直前のコミットメッセージを修正する．エディタが起動する．
+    p.61 直前のコミットメッセージを修正する．エディタが起動する．
 
 - `git commit -am "foo bar"`  
     p.64 git add と git commit -m を同時に行えるコマンド．
