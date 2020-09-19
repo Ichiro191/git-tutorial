@@ -172,11 +172,12 @@
 
 - git fetch、merge、pullの違い  
     参考: [【初心者向け】git fetch、git merge、git pullの違いについて - Qiita](https://qiita.com/wann/items/688bc17460a457104d7d)  
-| command               | explanation                                                                |
-| --------------------- | -------------------------------------------------------------------------- |
-| `git fetch`           | リモートの全ブランチ → ローカルの全「origin/xxx」ブランチ．                                       |
-| `git merge xxx`       | ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ．                                    |
-| `git pull origin xxx` | fetch + merge．つまり，リモートの「xxx」ブランチ → ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ． |
+
+    | コマンド  | 説明 |
+    | --------------------- | -------------------------------------------------------------------------- |
+    | `git fetch`           | リモートの全ブランチ → ローカルの全「origin/xxx」ブランチ． |
+    | `git merge xxx`       | ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ．  |
+    | `git pull origin xxx` | fetch + merge．つまり，リモートの「xxx」ブランチ → ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ． |
 
 
 
