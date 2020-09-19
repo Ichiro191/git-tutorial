@@ -167,8 +167,9 @@
     ```
     リモートのブランチを追跡していないブランチに対して，追跡するように設定する方法もある．
 
-- Git で不要になったローカルブランチ・リモートブランチを削除する方法  
-    参考（2013年なので，少し古い）: [Git で不要になったローカルブランチ・リモートブランチを削除する方法](https://qiita.com/iorionda/items/c7e0aca399371068a9b8)
+- ローカルブランチ・リモートブランチを削除する方法  
+    参考1（2013年なので，少し古い）: [Git で不要になったローカルブランチ・リモートブランチを削除する方法](https://qiita.com/iorionda/items/c7e0aca399371068a9b8)  
+    参考2（2016年，詳しい）: [gitの不要なブランチを消すコマンド - Qiita](https://qiita.com/mather314/items/a1536c52a2eb0426b2b5)
 
 - git fetch、merge、pullの違い  
     参考: [【初心者向け】git fetch、git merge、git pullの違いについて - Qiita](https://qiita.com/wann/items/688bc17460a457104d7d)  
@@ -204,6 +205,6 @@
     削除したいリポジトリのsettingsの一番下から．
 
 - powershellのプロンプトを編集  
-    [posh-gitのインストール＆プロンプトカスタマイズ - Qiita](https://qiita.com/wenbose/items/3ebc2e8acd4513d71ac3)
-    [PowerShellでGitを使いやすくする - shuhelohelo’s blog](https://shuhelohelo.hatenablog.com/entry/2019/10/22/025603)  
+    参考1: [posh-gitのインストール＆プロンプトカスタマイズ - Qiita](https://qiita.com/wenbose/items/3ebc2e8acd4513d71ac3)
+    参考2: [PowerShellでGitを使いやすくする - shuhelohelo’s blog](https://shuhelohelo.hatenablog.com/entry/2019/10/22/025603)  
     改行文字は `n
