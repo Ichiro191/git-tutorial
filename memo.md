@@ -132,7 +132,7 @@
 
 - [LearningGitBranching](https://pcottle.github.io/learnGitBranching/?locale=ja)  
     Gitの基本的な使い方を学べるサイト．上のリンクもlocaleにより一応日本語．  
-    融資による[日本語訳](https://k.swd.cc/learnGitBranching-ja/)もあり．
+    有志による[日本語訳](https://k.swd.cc/learnGitBranching-ja/)もあり．
 
 - [tryGit](https://try.github.io)  
     Gitの基本的な機能をWeb上で操作しながら学べる．  
