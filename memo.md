@@ -77,7 +77,7 @@
     p.64 git add と git commit -m を同時に行えるコマンド．
 
 - `git rebase -i HEAD~2`  
-    p.65 HEAD（最新コミット）を含めた指定数字回までのコミットを統合する．  
+    p.65 HEAD（最新コミット）を含めて上から数えた指定回数分のコミットを統合する．  
     起動するエディタで，統合してなくしたいコミットの行頭のpickをfixupに書き換える．
 
 
@@ -172,11 +172,11 @@
 
 - git fetch、merge、pullの違い  
     参考: [【初心者向け】git fetch、git merge、git pullの違いについて - Qiita](https://qiita.com/wann/items/688bc17460a457104d7d)  
-    | command               | explanation                                                                |
-    | --------------------- | -------------------------------------------------------------------------- |
-    | `git fetch`           | リモートの全ブランチ → ローカルの全「origin/xxx」ブランチ．たぶん全部．                            |
-    | `git merge xxx`       | ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ．                                   |
-    | `git pull origin xxx` | fetch + merge．つまり，リモートの「xxx」ブランチ → ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ． |
+| command               | explanation                                                                |
+| --------------------- | -------------------------------------------------------------------------- |
+| `git fetch`           | リモートの全ブランチ → ローカルの全「origin/xxx」ブランチ．                                       |
+| `git merge xxx`       | ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ．                                    |
+| `git pull origin xxx` | fetch + merge．つまり，リモートの「xxx」ブランチ → ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ． |
 
 
 
