@@ -1,4 +1,4 @@
-# GitHub実践入門
+# GitHub実践入門まとめ
 
 ## 第4章 Gitを操作しながら学ぶ
 
@@ -34,6 +34,8 @@
         ワークツリーと最新コミット（HEAD）間の差分を確認．
 
 
+
+
 ### 4.2 ブランチの操作
 
 - `git branch`  
@@ -53,6 +55,8 @@
 
 - `git log --graph`  
     p.54 ブランチの分岐と統合を視覚的に確認できる．
+
+
 
 
 ### 4.3 コミットを変更する操作
@@ -77,6 +81,8 @@
     起動するエディタで，統合してなくしたいコミットの行頭のpickをfixupに書き換える．
 
 
+
+
 ### 4.4 リモートリポジトリへの送信
 
 - `git remote add origin git@github.com:User/repository_name.git`  
@@ -90,6 +96,8 @@
 
 - `git push`  
     一度`-u`オプション付きで実行すればupstreamが設定され追跡されているため，その後は引数なしでもOK．
+
+
 
 
 ### 4.5 リモートリポジトリから取得
@@ -114,6 +122,25 @@
     更新したいブランチにいる状態で，upstreamがリモートのリポジトリに設定されていれば，`git pull`だけでOK．
 
 
+
+
+### 4.6 さらにGitを奥深く理解するための資料
+
+- [Pro Git](https://git-scm.com/book/)  
+    GitHub社の社員により執筆された資料．  
+    [日本語訳](https://git-scm.com/book/ja/)あり．
+
+- [LearningGitBranching](https://pcottle.github.io/learnGitBranching/?locale=ja)  
+    Gitの基本的な使い方を学べるサイト．上のリンクもlocaleにより一応日本語．  
+    融資による[日本語訳](https://k.swd.cc/learnGitBranching-ja/)もあり．
+
+- [tryGit](https://try.github.io)  
+    Gitの基本的な機能をWeb上で操作しながら学べる．  
+    英語のみ．
+
+
+
+
 ## Other Git Commands
 
 - ファイルのリネーム  
@@ -127,7 +154,10 @@
 - remoteに追加されたブランチを見れるようにする  
     参考: [gitでリモートに追加されたブランチが表示されないときは](https://www.atotok.co.jp/labo/4040620404d4987071e9dfe58eee87a0)  
     `git ls-remote (指定する場合はリモートリポジトリ名，originとか）`で新しくリモートに追加されたブランチが確認できたら，  
-    `git fetch`（リモートブランチの最新の情報を取得するコマンド）を実行する．
+    `git fetch`（リモートブランチの最新の情報を取得するコマンド）を実行する．  
+    - [git fetch コマンドの使い方と、主要オプションまとめ | WWWクリエイターズ](https://www-creators.com/archives/1272)  
+        git fetchの詳しい解説．  
+        `git fetch [リポジトリ，省略すると基本origin] [ブランチ．省略するとupstream設定済みの全ブランチ]`という使い方ができる．
 
 - ローカルのブランチが追跡しているリモートブランチを確認する方法  
     参考: [gitでローカルのブランチが追跡しているリモートブランチを確認する方法](https://qiita.com/kz_morita/items/c624f8cf27ec82de0baa)  
@@ -142,14 +172,20 @@
 
 - git fetch、merge、pullの違い  
     参考: [【初心者向け】git fetch、git merge、git pullの違いについて - Qiita](https://qiita.com/wann/items/688bc17460a457104d7d)  
-    `git fetch`…リモートの全ブランチ → ローカルの全「origin/xxx」ブランチ．  
-    `git merge xxx`…ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ  
-    `git pull origin xxx`  = fetch + merge． つまり，リモートの「xxx」ブランチ → ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ
+    | command               | explanation                                                                |
+    | --------------------- | -------------------------------------------------------------------------- |
+    | `git fetch`           | リモートの全ブランチ → ローカルの全「origin/xxx」ブランチ．たぶん全部．                            |
+    | `git merge xxx`       | ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ．                                   |
+    | `git pull origin xxx` | fetch + merge．つまり，リモートの「xxx」ブランチ → ローカルの「origin/xxx」ブランチ → ローカルの「xxx」ブランチ． |
+
+
 
 
 ## Other Git tips
 
 - [GitのHEADとは何者なのか - Qiita](https://qiita.com/ymzk-jp/items/00ff664da60c37458aaa)  
+
+
 
 
 ## Others
@@ -159,7 +195,7 @@
     `ssh-keygen -f 秘密鍵ファイル名 -p`
 
 - git bashの青色が読みづらい問題  
-    解決策 参考: [Windows環境で快適にBash(Git Bash)とターミナル(mintty)を使うために色とフォントを変える](https://qiita.com/Cesaroshun/items/6f7aa548ca65b137ca15)  
+    参考: [Windows環境で快適にBash(Git Bash)とターミナル(mintty)を使うために色とフォントを変える](https://qiita.com/Cesaroshun/items/6f7aa548ca65b137ca15)  
     dracula が一番読みやすく感じる．
 
 - GitHubからリポジトリを削除  
@@ -168,5 +204,5 @@
 
 - powershellのプロンプトを編集  
     [posh-gitのインストール＆プロンプトカスタマイズ - Qiita](https://qiita.com/wenbose/items/3ebc2e8acd4513d71ac3)
-    [PowerShellでGitを使いやすくする - shuhelohelo’s blog](https://shuhelohelo.hatenablog.com/entry/2019/10/22/025603)
-    改行文字 `n
+    [PowerShellでGitを使いやすくする - shuhelohelo’s blog](https://shuhelohelo.hatenablog.com/entry/2019/10/22/025603)  
+    改行文字は `n
