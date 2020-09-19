@@ -165,7 +165,7 @@
     ```
     ブランチ名 コミット番号 [追跡ブランチ名] コミットメッセージ
     ```
-    リモートのブランチを追跡していないブランチに対して，追跡するように設定する方法もある．
+    リモートのブランチを追跡していないブランチに対して，追跡を開始させるコマンドもある．
 
 - ローカルブランチ・リモートブランチを削除する方法  
     参考1（2013年なので，少し古い）: [Git で不要になったローカルブランチ・リモートブランチを削除する方法](https://qiita.com/iorionda/items/c7e0aca399371068a9b8)  
@@ -205,6 +205,6 @@
     削除したいリポジトリのsettingsの一番下から．
 
 - powershellのプロンプトを編集  
-    参考1: [posh-gitのインストール＆プロンプトカスタマイズ - Qiita](https://qiita.com/wenbose/items/3ebc2e8acd4513d71ac3)
+    参考1: [posh-gitのインストール＆プロンプトカスタマイズ - Qiita](https://qiita.com/wenbose/items/3ebc2e8acd4513d71ac3)  
     参考2: [PowerShellでGitを使いやすくする - shuhelohelo’s blog](https://shuhelohelo.hatenablog.com/entry/2019/10/22/025603)  
     改行文字は `n
