@@ -197,7 +197,7 @@
     `ssh-keygen -f 秘密鍵ファイル名 -p`
 
 - git bashの青色が読みづらい問題  
-    参考: [Windows環境で快適にBash(Git Bash)とターミナル(mintty)を使うために色とフォントを変える](https://qiita.com/Cesaroshun/items/6f7aa548ca65b137ca15)  
+    参考: [Windows環境で快適にBash(Git Bash)とターミナル(mintty)を使うために色とフォントを変える](https://qiita.com/hrkt/items/386dbfec429423715867)  
     dracula が一番読みやすく感じる．
 
 - GitHubからリポジトリを削除  
